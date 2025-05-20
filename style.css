@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    background: #eeeeee;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .calculator {
+    background: #26292D;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
+  }
+  
+  .display input {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: right;
+    border: none;
+    background: #40464C;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background: #40464C;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background: #707578;
+  }
+
+  .operation{
+    background-color:#538FFF;
+  }
+
+  .operation:hover{
+    background-color: #3d7bee;
+  }
+
+  #AC{
+    background-color: #E75142
+  }
+
+  #AC:hover{
+    background-color: #d03d30;
+  }
+
+  #igual{
+    background-color: #33CD76;
+  }
+
+  #igual:hover{
+    background-color: #26aa5f;
+  }
+
+  #delete{
+    background-color: #FF9B07;
+  }
+
+  #delete:hover{
+    background-color: #ee9207;
+  }
+
+  .history-container {
+    display: grid;
+  }
+
+  .history-container button{
+    background-color: #e96053;
+    font-size: 15px;
+    padding: 15px 14px;
+  }
+  
+  .history-container button:hover{
+    background-color: #dc3627;
+  }
+
+  .history {
+    background: rgba(220, 225, 230, 0.904);
+    padding: 14px;
+    border-radius: 10px;
+    max-height: 220px;
+    box-shadow: 0 0 4px #26292D;
+  }
+  
+  .history h2 {
+    margin-bottom: 5px;
+  }
+  
+  #historyList {
+    list-style: none;
+    font-size: 0.95em;
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+        padding: 20px;
+      }
+    
+      .container {
+        max-width: 100%;
+        padding: 0 10px;
+      }
+    
+      .calculator {
+        padding: 10px;
+      }
+    
+      .display input {
+        height: 40px;
+        font-size: 1.2em;
+        padding: 8px;
+      }
+    
+      .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+      }
+    
+      button {
+        padding: 12px 8px;
+        font-size: 1em;
+      }
+    
+      .history {
+        max-height: 150px;
+        font-size: 0.85em;
+      }
+      
+      .history-container{
+        gap: 10px;
+      }
+
+      .history-container button {
+        font-size: 0.85em;
+        padding: 10px;
+      }
+}
+
+  
+@media (max-width: 768px) {
+    .history-container{
+        gap: 15px;
+      }
+}
